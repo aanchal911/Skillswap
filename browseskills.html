@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Skills | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F3F4F6;
+      color: #1F2937;
+    }
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: #7C3AED;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1F2937;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #7C3AED;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+    h2 {
+      text-align: center;
+      color: #7C3AED;
+      margin-bottom: 1.5rem;
+    }
+    .search-box {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    input[type="text"] {
+      padding: 0.75rem;
+      width: 60%;
+      border: 1px solid #D1D5DB;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h3 {
+      color: #9333EA;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #4B5563;
+      font-size: 0.95rem;
+    }
+    footer {
+      background: #1F2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="inner">
+      <div class="logo">SkillSwap</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Search & Browse Skills</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Search skills like 'Excel', 'Photoshop', 'Cooking'..." oninput="filterSkills(this.value)" />
+    </div>
+    <div class="skills-grid" id="skillsGrid">
+      <!-- Skill cards will be rendered here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const skills = [
+      { title: 'Excel', desc: 'Manage data and automate tasks' },
+      { title: 'Photoshop', desc: 'Design, edit, and create graphics' },
+      { title: 'Cooking', desc: 'Home-style and gourmet meals' },
+      { title: 'Guitar', desc: 'Play and perform with ease' },
+      { title: 'Public Speaking', desc: 'Confidently speak in front of audiences' },
+      { title: 'Python', desc: 'Automate, analyze, and build apps' },
+      { title: 'Painting', desc: 'Express creativity through colors' },
+      { title: 'French Language', desc: 'Speak and understand basic French' }
+    ];
+
+    function renderSkills(filter = '') {
+      const grid = document.getElementById('skillsGrid');
+      grid.innerHTML = '';
+      skills.filter(skill => skill.title.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(skill => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `<h3>${skill.title}</h3><p>${skill.desc}</p>`;
+          grid.appendChild(card);
+        });
+    }
+
+    function filterSkills(value) {
+      renderSkills(value);
+    }
+
+    renderSkills();
+  </script>
+
+</body>
+</html>

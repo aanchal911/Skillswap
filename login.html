@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F9FAFB;
+      color: #1F2937;
+    }
+    .container {
+      max-width: 400px;
+      margin: 4rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: #7C3AED;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1F2937;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #7C3AED;
+    }
+    h2 {
+      text-align: center;
+      color: #7C3AED;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, select {
+      padding: 0.8rem;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #9333EA;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #7C3AED;
+    }
+    footer {
+      background: #1F2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="inner">
+      <div class="logo">SkillSwap</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Join or Login</h2>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="text" placeholder="City" />
+      <input type="text" placeholder="Country" />
+      <input type="text" placeholder="Your Skills (comma separated)" required />
+      <input type="text" placeholder="Skills You Want to Learn" />
+      <select required>
+        <option value="" disabled selected>Choose Community</option>
+        <option>Design</option>
+        <option>Tech</option>
+        <option>Music</option>
+        <option>Cooking</option>
+        <option>Other</option>
+      </select>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      alert("Login/Signup successful! Redirecting...");
+      // Simulate redirection
+      window.location.href = 'getstarted.html';
+    }
+  </script>
+
+</body>
+</html>

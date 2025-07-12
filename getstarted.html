@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F9FAFB;
+      color: #1F2937;
+    }
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: #7C3AED;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1F2937;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #7C3AED;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #7C3AED;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .box {
+      background-color: #F3E8FF;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    .box h3 {
+      color: #9333EA;
+      margin-bottom: 0.5rem;
+    }
+    .box p {
+      font-size: 0.95rem;
+      color: #4B5563;
+    }
+    footer {
+      background: #1F2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="inner">
+      <div class="logo">SkillSwap</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Let’s Get You Started</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Create Your Profile</h3>
+        <p>Set up your public or private profile with your skills, interests, and availability.</p>
+      </div>
+      <div class="box">
+        <h3>List Your Skills</h3>
+        <p>Tell others what you can offer — be it graphic design, cooking, or guitar lessons!</p>
+      </div>
+      <div class="box">
+        <h3>Find a Match</h3>
+        <p>Browse people offering what you want to learn. Filter by skill and time.</p>
+      </div>
+      <div class="box">
+        <h3>Send a Request</h3>
+        <p>Message and request a swap — wait for them to accept and get going!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
