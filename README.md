@@ -57,16 +57,14 @@ skill-swap-app/ ├── client/                # React Frontend │   ├─�
 
 ## 🌐 Live Demo (optional)
 
-🔗 [Deployed Frontend – Netlify/Vercel](#)  
-🔗 [Deployed Backend – Render/Railway](#)  
-
+🔗 https://skillswap-hackathon-project.vercel.app
 ---
 
 ## 🧪 How to Run Locally
 
 ### 1. Clone the Repo
 ```bash
-git clone https://github.com/your-username/skill-swap-app.git
+git clone https://github.com/aanchal911/skillswap.git
 cd skill-swap-app
 
 2. Setup Backend
