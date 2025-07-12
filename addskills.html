@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Your Skills | SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F9FAFB;
+      color: #1F2937;
+    }
+    .navbar {
+      background: white; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .navbar .inner {
+      max-width: 1100px; margin: auto; padding: 1rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-size: 1.5rem; color: #7C3AED; font-weight: 700; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: #1F2937; font-weight: 500;
+    }
+    .nav-links a:hover { color: #7C3AED; }
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    h2 {
+      color: #7C3AED;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: 600;
+    }
+    input[type="text"], input[type="submit"] {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #D1D5DB;
+      font-size: 1rem;
+    }
+    .checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .checkboxes label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    input[type="submit"] {
+      background: #7C3AED;
+      color: white;
+      margin-top: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #5B21B6;
+    }
+    footer {
+      background: #1F2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="inner">
+      <div class="logo">SkillSwap</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Add Your Skills</h2>
+    <form>
+      <label for="customSkill">Enter a Custom Skill:</label>
+      <input type="text" id="customSkill" placeholder="e.g. Video Editing" />
+
+      <label>Or Select from Common Skills:</label>
+      <div class="checkboxes">
+        <label><input type="checkbox" name="skills" value="Excel"> Excel</label>
+        <label><input type="checkbox" name="skills" value="Photoshop"> Photoshop</label>
+        <label><input type="checkbox" name="skills" value="Cooking"> Cooking</label>
+        <label><input type="checkbox" name="skills" value="Public Speaking"> Public Speaking</label>
+        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+        <label><input type="checkbox" name="skills" value="Painting"> Painting</label>
+        <label><input type="checkbox" name="skills" value="Guitar"> Guitar</label>
+        <label><input type="checkbox" name="skills" value="French"> French Language</label>
+      </div>
+
+      <input type="submit" value="Add Skills">
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+  </footer>
+</body>
+</html>

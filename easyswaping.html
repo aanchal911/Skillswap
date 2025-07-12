@@ -67,6 +67,7 @@
       padding: 1.5rem;
       border-radius: 10px;
       margin-bottom: 1.5rem;
+      position: relative;
     }
     .step h3 {
       color: #9333EA;
@@ -75,6 +76,54 @@
     .step p {
       color: #4B5563;
       font-size: 0.95rem;
+    }
+    .step a.button-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.6rem 1.2rem;
+      background: #7C3AED;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+    }
+    .step a.button-link:hover {
+      background: #5B21B6;
+    }
+    .textarea-box {
+      margin-top: 1rem;
+      display: none;
+    }
+    .textarea-box textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #D1D5DB;
+      font-family: 'Poppins';
+    }
+    .toggle-button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #7C3AED;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .accept-button {
+      margin-top: 1rem;
+      background: #9333EA;
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .done-message {
+      margin-top: 1rem;
+      color: #22C55E;
+      font-weight: 500;
+      display: none;
     }
     footer {
       background: #1F2937;
@@ -87,7 +136,6 @@
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="inner">
       <div class="logo">SkillSwap</div>
@@ -104,18 +152,25 @@
     <div class="step">
       <h3>1. Add Your Skills</h3>
       <p>Start by sharing what you’re good at. Add detailed skill descriptions to make your profile stand out.</p>
+      <a class="button-link" href="addskills.html">Add Your Skills</a>
     </div>
     <div class="step">
       <h3>2. Explore the Community</h3>
       <p>Search for skills you want to learn. Use filters and browse by categories or time preferences.</p>
+      <a class="button-link" href="community.html">Explore Community</a>
     </div>
     <div class="step">
-      <h3>3. Propose a Swap</h3>
+      <h3>3. Propose a Swap <button class="toggle-button" onclick="toggleTextarea()">▼</button></h3>
       <p>Found someone who matches your interest? Send them a swap request with your availability and proposal.</p>
+      <div class="textarea-box" id="swapBox">
+        <textarea rows="4" placeholder="Write your swap proposal here..."></textarea>
+      </div>
     </div>
     <div class="step">
       <h3>4. Accept and Start Learning</h3>
       <p>Once both parties agree, you’re all set! Start your knowledge exchange with mutual respect and fun.</p>
+      <button class="accept-button" onclick="showDone()">Accept</button>
+      <div class="done-message" id="doneMsg">✅ Done! You're ready to swap.</div>
     </div>
   </div>
 
@@ -123,5 +178,15 @@
     <p>&copy; 2025 Skill Swap. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleTextarea() {
+      const box = document.getElementById('swapBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showDone() {
+      document.getElementById('doneMsg').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
